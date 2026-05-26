@@ -1,14 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Game Collection | NumBall, Solitaire, Heartist</title>
+    <meta name="description" content="Discover the best classic games: NumBall, Solitaire Smart, and Heartist. Strategy, logic, and fun in one place.">
+    
+    <!-- Google Fonts: Inter and Playfair Display for contrast -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <div class="noise-overlay"></div>
+    
+    <header class="glass-header">
+        <nav>
+            <div class="logo">GameVault</div>
+            <div class="nav-links">
+                <a href="#numball">NumBall</a>
+                <a href="#solitaire">Solitaire</a>
+                <a href="#heartist">Heartist</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 class="hero-title">Timeless Classics, <br><em>Masterfully</em> Reimagined.</h1>
+            <p class="hero-subtitle">Experience the perfect blend of traditional logic and modern design. Three unique games, one premium collection.</p>
+        </section>
+
+        <section class="game-grid">
+            <!-- NumBall -->
+            <game-card 
+                id="numball"
+                title="NumBall"
+                tagline="Number Puzzle"
+                description="Challenge your logic with this minimalist number deduction game. Guess the hidden sequence using smart feedback."
+                features='["12 Attempts per Level", "Easy, Normal, Expert Modes", "Auto-save Functionality", "Game Center Support"]'
+                color-hue="220"
+                app-store-link="https://apps.apple.com/us/app/numball-number-puzzle/id428855284"
+                icon="🔢"
+            ></game-card>
+
+            <!-- Solitaire Smart -->
+            <game-card 
+                id="solitaire"
+                title="Solitaire Smart"
+                tagline="Intelligent Classic"
+                description="The classic solitaire you love, enhanced with smart assistant buttons to help you navigate the toughest deals."
+                features='["Draw 1 or 3 (Standard/Vegas)", "Smart Assistant Buttons", "Deep Statistical Analysis", "Auto-play Optimization"]'
+                color-hue="145"
+                app-store-link="https://apps.apple.com/us/app/solitaire-smart/id1106409420"
+                icon="🃏"
+            ></game-card>
+
+            <!-- Heartist -->
+            <game-card 
+                id="heartist"
+                title="Heartist"
+                tagline="Hearts Seasons"
+                description="Play Hearts like never before. Compete in 70-round seasons, build leagues with friends, and rise through the ranks."
+                features='["Season-based Progression", "10-Player Competition", "Private Friend Leagues", "Dynamic Seasonal Themes"]'
+                color-hue="340"
+                app-store-link="https://apps.apple.com/us/app/heartist-hearts-seasons/id1610385127"
+                icon="♥️"
+            ></game-card>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <p>&copy; 2026 GameVault Collection. All games are available on the App Store.</p>
+    </footer>
+
+    <script type="module" src="main.js"></script>
 </body>
 </html>
