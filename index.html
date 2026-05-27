@@ -1,81 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classic Game Collection | NumBall, Solitaire, Heartist</title>
-    <meta name="description" content="Discover the best classic games: NumBall, Solitaire Smart, and Heartist. Strategy, logic, and fun in one place.">
-    
-    <!-- Google Fonts: Inter and Playfair Display for contrast -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    
+    <title>소개 페이지 | Blogspot</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body data-theme="light">
     <div class="noise-overlay"></div>
+    <div class="decorative-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
     
-    <header class="glass-header">
-        <nav>
-            <div class="logo">GameVault</div>
-            <div class="nav-links">
-                <a href="#numball">NumBall</a>
-                <a href="#solitaire">Solitaire</a>
-                <a href="#heartist">Heartist</a>
-            </div>
+    <header class="navbar">
+        <div class="logo">Minimal.</div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                <i data-lucide="sun" class="sun-icon"></i>
+                <i data-lucide="moon" class="moon-icon"></i>
+            </button>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1 class="hero-title">Timeless Classics, <br><em>Masterfully</em> Reimagined.</h1>
-            <p class="hero-subtitle">Experience the perfect blend of traditional logic and modern design. Three unique games, one premium collection.</p>
+    <main class="content-wrapper">
+        <!-- Hero Section -->
+        <section class="hero-section" id="about">
+            <div class="hero-content">
+                <span class="badge">Welcome to my space</span>
+                <h1 class="reveal-text">안녕하세요, <br><span class="highlight">World!</span> 👋</h1>
+                <p class="hero-description">
+                    단순한 테스트 페이지를 넘어, 저의 생각과 기술적 영감을 기록하는 정성스러운 공간입니다. 
+                    이미지보다 텍스트와 디자인의 조화에 집중하여 본질을 전달합니다.
+                </p>
+                <div class="hero-actions">
+                    <button class="primary-btn" id="check-btn">
+                        <i data-lucide="sparkles"></i>
+                        작동 확인하기
+                    </button>
+                    <a href="#work" class="secondary-btn">더 알아보기</a>
+                </div>
+            </div>
         </section>
 
-        <section class="game-grid">
-            <!-- NumBall -->
-            <game-card 
-                id="numball"
-                title="NumBall"
-                tagline="Number Puzzle"
-                description="Challenge your logic with this minimalist number deduction game. Guess the hidden sequence using smart feedback."
-                features='["12 Attempts per Level", "Easy, Normal, Expert Modes", "Auto-save Functionality", "Game Center Support"]'
-                color-hue="220"
-                app-store-link="https://apps.apple.com/us/app/numball-number-puzzle/id428855284"
-                icon="🔢"
-            ></game-card>
+        <!-- Feature Grid -->
+        <section class="feature-section" id="work">
+            <div class="section-header">
+                <h2>What I Do</h2>
+                <p>다양한 기술 스택을 바탕으로 가치를 만듭니다.</p>
+            </div>
+            <div class="grid-container">
+                <div class="grid-card">
+                    <div class="card-icon"><i data-lucide="code-2"></i></div>
+                    <h3>Development</h3>
+                    <p>현대적인 웹 표준을 준수하며 견고한 구조를 설계합니다.</p>
+                </div>
+                <div class="grid-card">
+                    <div class="card-icon"><i data-lucide="palette"></i></div>
+                    <h3>Design</h3>
+                    <p>사용자 경험을 최우선으로 하는 미니멀하고 아름다운 UI를 지향합니다.</p>
+                </div>
+                <div class="grid-card">
+                    <div class="card-icon"><i data-lucide="terminal"></i></div>
+                    <h3>Logic</h3>
+                    <p>복잡한 문제를 단순하고 효율적인 코드로 해결합니다.</p>
+                </div>
+            </div>
+        </section>
 
-            <!-- Solitaire Smart -->
-            <game-card 
-                id="solitaire"
-                title="Solitaire Smart"
-                tagline="Intelligent Classic"
-                description="The classic solitaire you love, enhanced with smart assistant buttons to help you navigate the toughest deals."
-                features='["Draw 1 or 3 (Standard/Vegas)", "Smart Assistant Buttons", "Deep Statistical Analysis", "Auto-play Optimization"]'
-                color-hue="145"
-                app-store-link="https://apps.apple.com/us/app/solitaire-smart/id1106409420"
-                icon="🃏"
-            ></game-card>
-
-            <!-- Heartist -->
-            <game-card 
-                id="heartist"
-                title="Heartist"
-                tagline="Hearts Seasons"
-                description="Play Hearts like never before. Compete in 70-round seasons, build leagues with friends, and rise through the ranks."
-                features='["Season-based Progression", "10-Player Competition", "Private Friend Leagues", "Dynamic Seasonal Themes"]'
-                color-hue="340"
-                app-store-link="https://apps.apple.com/us/app/heartist-hearts-seasons/id1610385127"
-                icon="♥️"
-            ></game-card>
+        <!-- Stats/Footer Info -->
+        <section class="info-section">
+            <div class="stats-banner">
+                <div class="stat-box">
+                    <span class="num">100%</span>
+                    <span class="lab">Passion</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-box">
+                    <span class="num">Clean</span>
+                    <span class="lab">Code</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-box">
+                    <span class="num">Modern</span>
+                    <span class="lab">Stack</span>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="glass-footer">
-        <p>&copy; 2026 GameVault Collection. All games are available on the App Store.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Blogspot Intro. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i data-lucide="github"></i></a>
+                <a href="#" class="social-icon"><i data-lucide="twitter"></i></a>
+                <a href="#" class="social-icon"><i data-lucide="instagram"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <script type="module" src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
